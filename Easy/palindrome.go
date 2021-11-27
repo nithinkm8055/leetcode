@@ -6,24 +6,13 @@ import "strconv"
 
 // bruteforce : 33ms
 func IsPalindrome(x int) bool {
-	if x < 0 {
-		return false
-	}  else if x >=10  {
-		num := strconv.Itoa(x)
-		length := len(num) /2
-		for i := 0; i < len(num) / 2 ; i++ {
-			if num[i] == num[len(num) - 1 - i] {
-				if i == length - 1 {
-					return true
-				}
-			} else {
-				return false
-			}
+	num := strconv.Itoa(x)
+	for i := 0; i < len(num) / 2 ; i++ {
+		if num[i] != num[len(num) - 1 - i] {
+			return false
 		}
-	} else {
-		return true
 	}
-	return false
+	return true
 }
 
 func IsPalindrome2(x int) bool {

@@ -11,20 +11,18 @@ func main(){
 	test()
 
 	//twoSumRun()
-	//isPalindrome()
+	isPalindrome()
 	//romanToInt()
 	//longestCommonPrefix()
 	//validParentheses()
 	//mergeTwoLists()
-	addTwoNumbers()
+	//addTwoNumbers()
 }
 
 
 func test(){
-
 	//mergeTwoLists(l1 , l2)
 }
-
 
 func addTwoNumbers(){
 	//{2,4,3} {5,6,4}  {9,9,9,9,9,9,9} {9,9,9,9}
