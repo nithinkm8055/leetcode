@@ -6,6 +6,8 @@ type ListNode struct {
     Next *ListNode
 }
 
+// Q2: https://leetcode.com/problems/add-two-numbers/
+
 func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	returnNode := &ListNode{}

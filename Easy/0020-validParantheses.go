@@ -1,5 +1,7 @@
 package Easy
 
+// Q20 : https://leetcode.com/problems/valid-parentheses/
+
 func IsValid(s string) bool {
 
 	var q []rune

@@ -11,17 +11,55 @@ func main(){
 	test()
 
 	//twoSumRun()
-	isPalindrome()
+	//isPalindrome()
 	//romanToInt()
 	//longestCommonPrefix()
 	//validParentheses()
 	//mergeTwoLists()
 	//addTwoNumbers()
+	//removeDuplicates()
+	//StrStr()
+	//maxSubArray()
+	//lengthOfLastWord()
+	//plusOne()
+	//addBinary()
 }
-
 
 func test(){
 	//mergeTwoLists(l1 , l2)
+}
+
+func addBinary() {
+	num1 := "10100000100100110110010000010101111011011001101110111111111101000000101111001110001111100001101"
+	num2 := "110101001011101110001111100110001010100001101011101010000011011011001011101111001100000011011110011"
+	//num1 := "1010000010010011011001000001010111101101100110"
+	//num2 := "11010100101110111000111110011000101010000110101110"
+	fmt.Println(Easy.AddBinary(num1, num2))
+}
+
+func plusOne(){
+	nums := []int{0}
+	fmt.Println(Easy.PlusOne(nums))
+}
+
+func lengthOfLastWord(){
+	s := "Hello World 32"
+	fmt.Println(Easy.LengthOfLastWord(s))
+}
+
+func maxSubArray(){
+	nums := []int{-2,1,-3,4,-1,2,1,-5,4}
+	fmt.Println(Easy.MaxSubArray(nums))
+}
+
+func StrStr(){
+	fmt.Println(Easy.StrStr("mississippi", "issippi"))
+	//fmt.Println(Easy.StrStr("hello", "oo"))
+}
+
+func removeDuplicates(){
+	nums := []int{0,0,1,1,1,2,2,3,3,4}
+	fmt.Println(Easy.RemoveDuplicates(nums))
 }
 
 func addTwoNumbers(){
@@ -110,7 +148,7 @@ func validParentheses(){
 }
 
 func longestCommonPrefix(){
-	strs := []string{"flower","flow","flight"}
+	strs := []string{"flower","flow","flight","dog"}
 	//strs := []string{"dog","car","race"}
 	fmt.Println(Easy.LongestCommonPrefix(strs))
 }
@@ -119,7 +157,6 @@ func romanToInt() {
 	s := "XXVIII"
 	fmt.Println(Easy.RomanToInt(s))
 }
-
 
 func isPalindrome(){
 	num := 1223221
