@@ -23,10 +23,23 @@ func main(){
 	//lengthOfLastWord()
 	//plusOne()
 	//addBinary()
+	lengthOfLongestSubstring()
+
 }
 
 func test(){
-	//mergeTwoLists(l1 , l2)
+
+	//s := "abc"
+	//freq := make(map[rune]int)
+	//freq[rune(s[0])] = 1
+	//freq['b'] = freq['b']
+	//
+	//fmt.Println(freq['b'])
+}
+
+func lengthOfLongestSubstring(){
+	s := "abcaadb"
+	fmt.Println(Medium.LengthOfLongestSubstring(s))
 }
 
 func addBinary() {
