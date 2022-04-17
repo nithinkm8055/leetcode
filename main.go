@@ -2,6 +2,7 @@ package main
 
 import (
 	"DSA/Easy"
+	"DSA/Hard"
 	"DSA/Medium"
 	"fmt"
 )
@@ -23,9 +24,12 @@ func main(){
 	//lengthOfLastWord()
 	//plusOne()
 	//addBinary()
-	lengthOfLongestSubstring()
-
+	//lengthOfLongestSubstring()
+	//merge()
+	//climbingStairs()
+	fmt.Println(Hard.Trap([]int{4,2,0,3,2,5}))
 }
+
 
 func test(){
 

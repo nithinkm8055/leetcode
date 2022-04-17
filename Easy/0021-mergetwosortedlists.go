@@ -7,15 +7,13 @@ type ListNode struct {
      Next *ListNode
 }
 
-type LinkedList struct {
-	head *ListNode
-	length int
-}
-
 func MergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 
-	resultNode := &ListNode{}
-	prev := resultNode
+	resultNode := &ListNode{} // head static
+	// singly linked list
+	// dpoubly linked list
+
+	prev := resultNode // moving pointer
 
 
 	for ; l1 != nil || l2 != nil ; {
