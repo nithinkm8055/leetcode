@@ -6,12 +6,12 @@ func Trap(height []int) int {
 
 	ans := 0
 	for i := 1; i < len(height)-1; i++ {
-		ans +=  max(0, min(maxHeightLeft[i], maxHeightRight[i]) - height[i])
+		ans += max(0, min(maxHeightLeft[i], maxHeightRight[i])-height[i])
 	}
 	return ans
 }
 
-func findMaxHeightLeft(height []int) []int{
+func findMaxHeightLeft(height []int) []int {
 	maxHeightLeft := make([]int, len(height))
 	maxHeight := 0
 	for i := range height {
@@ -23,10 +23,10 @@ func findMaxHeightLeft(height []int) []int{
 	return maxHeightLeft
 }
 
-func findMaxHeightRight(height []int) []int{
+func findMaxHeightRight(height []int) []int {
 	maxHeightRight := make([]int, len(height))
 	maxHeight := 0
-	for i := len(height) - 1; i >=0; i -- {
+	for i := len(height) - 1; i >= 0; i-- {
 		maxHeightRight[i] = maxHeight
 		if height[i] > maxHeight {
 			maxHeight = height[i]
@@ -35,7 +35,7 @@ func findMaxHeightRight(height []int) []int{
 	return maxHeightRight
 }
 
-func max (a int, b int) int {
+func max(a int, b int) int {
 	if a > b {
 		return a
 	}
@@ -48,6 +48,3 @@ func min(a int, b int) int {
 	}
 	return b
 }
-
-
-

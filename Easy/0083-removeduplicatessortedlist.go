@@ -1,6 +1,5 @@
 package Easy
 
-
 //type ListNode struct {
 //	Val int
 //	Next *ListNode
@@ -12,7 +11,7 @@ func deleteDuplicates(head *ListNode) *ListNode {
 	prev := result
 	for head != nil {
 
-		if head.Next != nil && head.Val != head.Next.Val || head.Next == nil{
+		if head.Next != nil && head.Val != head.Next.Val || head.Next == nil {
 			prev.Next = head
 			prev = prev.Next
 		}

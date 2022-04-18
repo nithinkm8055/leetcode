@@ -6,7 +6,7 @@ func SubarraySum(nums []int, k int) int {
 		currSum := 0
 		for j := i; j < len(nums); j++ {
 			currSum = currSum + nums[j]
-			if currSum == k{
+			if currSum == k {
 				counter++
 			}
 		}

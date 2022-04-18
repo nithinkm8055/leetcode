@@ -1,9 +1,8 @@
 package Medium
 
-
 type ListNode struct {
-    Val int
-    Next *ListNode
+	Val  int
+	Next *ListNode
 }
 
 // Q2: https://leetcode.com/problems/add-two-numbers/
@@ -14,7 +13,7 @@ func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	prev := returnNode
 	carry := 0
 
-	for ; l1 != nil || l2 != nil ; {
+	for l1 != nil || l2 != nil {
 
 		prev.Val = l1.Val + l2.Val + carry
 		l1 = l1.Next
@@ -26,8 +25,6 @@ func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		} else {
 			carry = 0
 		}
-
-
 
 		if l1 == nil && l2 != nil {
 			l1 = &ListNode{}

@@ -2,8 +2,8 @@ package Easy
 
 func mySqrt(x int) int {
 	i := 1
-	for  ; i * i <= x  ;  {
+	for i*i <= x {
 		i++
 	}
-	return i-1
+	return i - 1
 }

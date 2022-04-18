@@ -3,8 +3,8 @@ package Easy
 // Q21: https://leetcode.com/problems/merge-two-sorted-lists
 
 type ListNode struct {
-     Val int
-     Next *ListNode
+	Val  int
+	Next *ListNode
 }
 
 func MergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
@@ -15,8 +15,7 @@ func MergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 
 	prev := resultNode // moving pointer
 
-
-	for ; l1 != nil || l2 != nil ; {
+	for l1 != nil || l2 != nil {
 
 		if l1 == nil {
 			prev.Next = l2

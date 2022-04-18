@@ -15,14 +15,12 @@ func TwoSum2(nums []int, target int) []int {
 	return []int{}
 }
 
-
-
 var result []int
 
 // slower 32ms with less memory usage -> O(n2)
 func TwoSum(nums []int, target int) []int {
-	for index,  num := range nums {
-		check := target  - num
+	for index, num := range nums {
+		check := target - num
 		checkComposite(index, check, nums)
 		if len(result) > 0 {
 			return result
@@ -33,8 +31,8 @@ func TwoSum(nums []int, target int) []int {
 
 }
 
-func checkComposite(index int, check int, nums []int) []int{
-	for i := index + 1 ;i < len(nums) ; i++ {
+func checkComposite(index int, check int, nums []int) []int {
+	for i := index + 1; i < len(nums); i++ {
 		if nums[i] == check {
 			result = append(result, index, i)
 			return result

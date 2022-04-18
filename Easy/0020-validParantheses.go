@@ -25,4 +25,3 @@ func IsValid(s string) bool {
 
 	return len(q) == 0
 }
-

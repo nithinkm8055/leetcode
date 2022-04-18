@@ -2,7 +2,6 @@ package Easy
 
 import "sort"
 
-
 func longestCommonPrefixSol(strs []string) string {
 	var result = ""
 	for i := 0; ; i++ {
@@ -14,6 +13,7 @@ func longestCommonPrefixSol(strs []string) string {
 		result += string(strs[0][i])
 	}
 }
+
 // Q14 : https://leetcode.com/problems/longest-common-prefix/
 // "flow", "flight", "flower", "dog"
 func longestCommonPrefix(strs []string) string {
@@ -40,7 +40,6 @@ func longestCommonPrefix(strs []string) string {
 	return result
 }
 
-
 // bruteforce : 0ms - faster with more memory
 
 func LongestCommonPrefix(strs []string) string {
@@ -55,8 +54,8 @@ func LongestCommonPrefix(strs []string) string {
 
 	highestprefix := strs[0]
 	result := ""
-	for i := 1 ; i < len(strs) ; i++ {
-		for j := 0; j < len(strs[0]) ; j++ {
+	for i := 1; i < len(strs); i++ {
+		for j := 0; j < len(strs[0]); j++ {
 			if strs[i][j] == highestprefix[j] {
 				result += string(strs[i][j])
 			} else {

@@ -12,7 +12,7 @@ func LengthOfLongestSubstring(s string) int {
 			freq[rune(s[left])] = freq[rune(s[left])] - 1
 			left++
 		}
-		res = int(math.Max(float64(res), float64(index-left + 1)))
+		res = int(math.Max(float64(res), float64(index-left+1)))
 	}
 
 	return res

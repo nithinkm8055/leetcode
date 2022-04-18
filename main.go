@@ -7,7 +7,7 @@ import (
 	"fmt"
 )
 
-func main(){
+func main() {
 
 	test()
 
@@ -27,11 +27,15 @@ func main(){
 	//lengthOfLongestSubstring()
 	//merge()
 	//climbingStairs()
-	fmt.Println(Hard.Trap([]int{4,2,0,3,2,5}))
+	//fmt.Println(Hard.Trap([]int{4,2,0,3,2,5}))
+	//[[12,13,1,12],[13,4,13,12],[13,8,10,12],[12,13,12,12],[13,13,13,13]]
+	fmt.Println(Hard.TrapRainWater([][]int{{12, 13, 1, 12}, {13, 4, 13, 12}, {13, 8, 10, 12}, {12, 13, 12, 12}, {13, 13, 13, 13}})) //14
+	fmt.Println(Hard.TrapRainWater([][]int{{5, 5, 5, 1}, {5, 1, 1, 5}, {5, 1, 5, 5}, {5, 2, 5, 8}})) //3
+	fmt.Println(Hard.TrapRainWater([][]int{{9, 9, 9, 9, 9, 9, 8, 9, 9, 9, 9}, {9, 0, 0, 0, 0, 0, 1, 0, 0, 0, 9}, {9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9}, {9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9}, {9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9}})) //215
+	fmt.Println(Hard.TrapRainWater([][]int{{78,16,94,36},{87,93,50,22},{63,28,91,60},{64,27,41,27},{73,37,12,69},{68,30,83,31},{63,24,68,36}})) //44
 }
 
-
-func test(){
+func test() {
 
 	//s := "abc"
 	//freq := make(map[rune]int)
@@ -41,7 +45,7 @@ func test(){
 	//fmt.Println(freq['b'])
 }
 
-func lengthOfLongestSubstring(){
+func lengthOfLongestSubstring() {
 	s := "abcaadb"
 	fmt.Println(Medium.LengthOfLongestSubstring(s))
 }
@@ -54,32 +58,32 @@ func addBinary() {
 	fmt.Println(Easy.AddBinary(num1, num2))
 }
 
-func plusOne(){
+func plusOne() {
 	nums := []int{0}
 	fmt.Println(Easy.PlusOne(nums))
 }
 
-func lengthOfLastWord(){
+func lengthOfLastWord() {
 	s := "Hello World 32"
 	fmt.Println(Easy.LengthOfLastWord(s))
 }
 
-func maxSubArray(){
-	nums := []int{-2,1,-3,4,-1,2,1,-5,4}
+func maxSubArray() {
+	nums := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
 	fmt.Println(Easy.MaxSubArray(nums))
 }
 
-func StrStr(){
+func StrStr() {
 	fmt.Println(Easy.StrStr("mississippi", "issippi"))
 	//fmt.Println(Easy.StrStr("hello", "oo"))
 }
 
-func removeDuplicates(){
-	nums := []int{0,0,1,1,1,2,2,3,3,4}
+func removeDuplicates() {
+	nums := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
 	fmt.Println(Easy.RemoveDuplicates(nums))
 }
 
-func addTwoNumbers(){
+func addTwoNumbers() {
 	//{2,4,3} {5,6,4}  {9,9,9,9,9,9,9} {9,9,9,9}
 	vals1 := []int{2, 1}
 	vals2 := []int{2}
@@ -90,33 +94,33 @@ func addTwoNumbers(){
 	param1 := l1
 	param2 := l2
 
-	for i :=0 ; i < len(vals1); i++ {
+	for i := 0; i < len(vals1); i++ {
 		l1.Val = vals1[i]
 
-		if i != len(vals1) - 1 {
+		if i != len(vals1)-1 {
 			l1.Next = &Medium.ListNode{}
 			l1 = l1.Next
 		}
 	}
 
-	for i :=0 ; i < len(vals2); i++ {
+	for i := 0; i < len(vals2); i++ {
 		l2.Val = vals2[i]
 
-		if i != len(vals2) - 1 {
+		if i != len(vals2)-1 {
 			l2.Next = &Medium.ListNode{}
 			l2 = l2.Next
 		}
 	}
 
-	output := Medium.AddTwoNumbers(param1,param2)
+	output := Medium.AddTwoNumbers(param1, param2)
 
-	for ; output != nil ; {
+	for output != nil {
 		fmt.Println(output.Val)
 		output = output.Next
 	}
 }
 
-func mergeTwoLists(){
+func mergeTwoLists() {
 	l3 := Easy.ListNode{
 		Val:  4,
 		Next: nil,
@@ -149,7 +153,7 @@ func mergeTwoLists(){
 
 	l7 := Easy.MergeTwoLists(&l1, &l4)
 
-	for ; l7.Next != nil; {
+	for l7.Next != nil {
 		fmt.Println(l7.Val)
 		l7 = l7.Next
 		if l7.Next == nil {
@@ -158,14 +162,14 @@ func mergeTwoLists(){
 	}
 }
 
-func validParentheses(){
+func validParentheses() {
 	s := "()[]{}"
 	//s := "{[]}"
 	fmt.Println(Easy.IsValid(s))
 }
 
-func longestCommonPrefix(){
-	strs := []string{"flower","flow","flight","dog"}
+func longestCommonPrefix() {
+	strs := []string{"flower", "flow", "flight", "dog"}
 	//strs := []string{"dog","car","race"}
 	fmt.Println(Easy.LongestCommonPrefix(strs))
 }
@@ -175,16 +179,15 @@ func romanToInt() {
 	fmt.Println(Easy.RomanToInt(s))
 }
 
-func isPalindrome(){
+func isPalindrome() {
 	num := 1223221
 	fmt.Println(Easy.IsPalindrome2(num))
 }
 
-func twoSumRun(){
-	nums := []int{3,3,3}
+func twoSumRun() {
+	nums := []int{3, 3, 3}
 	target := 6
 	//sum := Easy.TwoSum(nums, target) // bruteforce
 	sum := Easy.TwoSum2(nums, target) // optimized approach
 	fmt.Println(sum)
 }
-

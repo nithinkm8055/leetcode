@@ -6,7 +6,7 @@ func PlusOne(nums []int) []int {
 
 	carry := 0
 
-	for j := len(nums)-1 ; j >= 0; j-- {
+	for j := len(nums) - 1; j >= 0; j-- {
 		if j == len(nums)-1 {
 			nums[j] = nums[j] + 1
 		} else {
@@ -23,7 +23,7 @@ func PlusOne(nums []int) []int {
 	// only append to slice if you have a carry
 	if carry == 1 {
 		nums = append(nums, 1)
-		for i:=0 ;i < len(nums)-1; i++ {
+		for i := 0; i < len(nums)-1; i++ {
 			nums[i+1] = nums[i]
 		}
 		nums[0] = 1
