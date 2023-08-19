@@ -33,7 +33,7 @@ func deleteNode(root *TreeNode, k int) *TreeNode {
 		} else {
 			parent.Right = temp
 		}
-	} else if (curr.Left != nil && curr.Right != nil) { // node contains 2 children
+	} else if curr.Left != nil && curr.Right != nil { // node contains 2 children
 
 		temp := curr.Left
 		prev := curr
