@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	test()
+	//test()
 
 	//twoSumRun()
 	//isPalindrome()
@@ -32,7 +32,8 @@ func main() {
 	//fmt.Println(Hard.TrapRainWater([][]int{{5, 5, 5, 1}, {5, 1, 1, 5}, {5, 1, 5, 5}, {5, 2, 5, 8}})) //3
 	//fmt.Println(Hard.TrapRainWater([][]int{{9, 9, 9, 9, 9, 9, 8, 9, 9, 9, 9}, {9, 0, 0, 0, 0, 0, 1, 0, 0, 0, 9}, {9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9}, {9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9}, {9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9}})) //215
 	//fmt.Println(Hard.TrapRainWater([][]int{{78,16,94,36},{87,93,50,22},{63,28,91,60},{64,27,41,27},{73,37,12,69},{68,30,83,31},{63,24,68,36}})) //44
-	fmt.Println(Easy.Generate(50))
+	//SortArrayByParity()
+	fmt.Println(Medium.Merge([][]int{{1, 3}, {2, 6}, {8, 10}, {15, 18}}))
 }
 
 func test() {
@@ -43,6 +44,10 @@ func test() {
 	//freq['b'] = freq['b']
 	//
 	//fmt.Println(freq['b'])
+}
+
+func SortArrayByParity() {
+	Easy.SortArrayByParity([]int{1, 0, 3, 5})
 }
 
 func lengthOfLongestSubstring() {
