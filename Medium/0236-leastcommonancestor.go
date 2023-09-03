@@ -19,7 +19,7 @@ func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 
 	preorder(root, p.Val, &path1)
 	preorder(root, q.Val, &path2)
-	//fmt.Println(path1, path2)
+
 	for i := range path1 {
 		for j := range path2 {
 
