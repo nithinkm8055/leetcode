@@ -1,11 +1,11 @@
 package Medium
 
-type ListNode struct {
+type listNode struct {
 	Val  int
-	Next *ListNode
+	Next *listNode
 }
 
-func swapPairs(head *ListNode) *ListNode {
+func swapPairs(head *listNode) *listNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
